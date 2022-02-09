@@ -1,12 +1,12 @@
-import { Router, Request, Response } from 'express';
+import { Router } from 'express';
+import { ListWatchLaterListController } from './../modules/watchLater/useCases/listWatchLaterList/listWatchLaterList.controller';
 import { AddToWatchLaterController } from './../modules/watchLater/useCases/addToWatchLater/addToWatchLater.controller';
 
 const watchLaterRouter = Router();
+const listWatchLaterListController = new ListWatchLaterListController();
 const addToWatchLaterController = new AddToWatchLaterController();
 
-watchLaterRouter.get('/', (request: Request, response: Response) => {
-    return response.json({ message: 'Hello Worldd' });
-})
+watchLaterRouter.get('/', listWatchLaterListController.listWatchLaterList)
 
 watchLaterRouter.post('/', addToWatchLaterController.addToWatchLaterList);
 
