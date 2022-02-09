@@ -48,6 +48,50 @@
             }
           }
         }
+      },
+      "post": {
+        "tags": [
+          "WatchLater"
+        ],
+        "summary": "Add movies to watch later list",
+        "description": "Add movies to watch later list",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "director": {
+                    "type": "string"
+                  },
+                  "releasedYear": {
+                    "type": "number"
+                  },
+                  "rating": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "title": "TheShawshankRedemption",
+                  "director": "FrankDarabont",
+                  "releasedYear": 1994,
+                  "rating": "GOOD"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Movie already in watch later list"
+          }
+        }
       }
     }
   }

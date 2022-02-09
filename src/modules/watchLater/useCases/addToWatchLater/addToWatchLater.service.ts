@@ -5,7 +5,7 @@ import { Movie } from '../../entity/movie.entity';
 export class AddToWatchLaterService {
   constructor() { }
 
-  static execute(movie: Movie): Movie {
+  static execute(movie: Movie) {
     const alreadyHasMovie = database
       .watchLaterList
       .find(movieItem => movieItem.title === movie.title);
@@ -15,6 +15,5 @@ export class AddToWatchLaterService {
     Object.assign(movie, { id: uuid() });
 
     database.watchLaterList.push(movie);
-    return movie;
   }
 }
