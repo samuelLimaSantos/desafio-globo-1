@@ -5,6 +5,9 @@
   "repository": "https://github.com/samuelLimaSantos/desafio-globo-1.git",
   "author": "Samuel Santos <samuellima280499@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start:dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+  },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "ts-node-dev": "^1.1.8",
