@@ -1,10 +1,10 @@
+import { Movie } from './../../entity/movie.entity';
 import { Request, Response } from 'express';
 import { AddToWatchLaterService } from './addToWatchLater.service';
-import { IMovie } from './../../../../shared/fakeDatabase';
 
 export class AddToWatchLaterController {
   addToWatchLaterList(request: Request, response: Response) {
-    const movie = request.body as IMovie;
+    const movie = request.body as Movie;
     try {
       const createdMovie = AddToWatchLaterService.execute(movie);
   

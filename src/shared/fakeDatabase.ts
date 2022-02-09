@@ -1,21 +1,14 @@
+import { Movie } from './../modules/watchLater/entity/movie.entity';
+
 export enum Rating {
   BAD = 'BAD',
   GOOD = 'GOOD',
   EXCELLENT = 'EXCELLENT',
 }
 
-export interface IMovie {
-  id: string;
-  title: string;
-  director: string;
-  releasedYear: number;
-  rating: Rating;
-}
-
 export interface IFakeDatabase {
-  watchLaterList: IMovie[];
+  watchLaterList: Movie[];
 }
-
 
 export const database: IFakeDatabase = {
   watchLaterList: [
