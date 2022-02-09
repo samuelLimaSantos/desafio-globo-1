@@ -8,5 +8,47 @@
       "email": "samuellima280499@gmail.com"
     }
   },
-  "paths": {}
+  "paths": {
+    "/watch-later": {
+      "get": {
+        "tags": [
+          "WatchLater"
+        ],
+        "summary": "Show all movies from watch later",
+        "description": "Show all movies from watch later",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "director": {
+                        "type": "string"
+                      },
+                      "releasedYear": {
+                        "type": "number"
+                      },
+                      "rating": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
