@@ -1,0 +1,12 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Globo desafio 1",
+    "description": "Api simples que simula uma lista de assistir depois para a GloboPlay",
+    "version": "1.0.0",
+    "contact": {
+      "email": "samuellima280499@gmail.com"
+    }
+  },
+  "paths": {}
+}
