@@ -5,7 +5,7 @@ export enum Rating {
 }
 
 export interface IMovie {
-  id: number;
+  id: string;
   title: string;
   director: string;
   releasedYear: number;
@@ -20,7 +20,7 @@ export interface IFakeDatabase {
 export const database: IFakeDatabase = {
   watchLaterList: [
     {
-      id: 1,
+      id: 'bfe13127-4d56-4fbb-8626-96903017410c',
       title: 'The Shawshank Redemption',
       director: 'Frank Darabont',
       releasedYear: 1994,
