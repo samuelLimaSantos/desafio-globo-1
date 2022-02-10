@@ -70,6 +70,12 @@ npm run test
 npm run test
 ```
 
+# Acessar documentação
+
+> O projeto utiliza o swagger para documentar os endpoints, para acessar basta entrar na url com a aplicação rodando:
+
+http://localhost:3333/api/v1
+
 ## Author
 
 👤 **Samuel Santos**
